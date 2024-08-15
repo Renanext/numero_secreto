@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Número Secreto</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo do Número Secreto</h1>
+        <div id="difficultyContainer">
+            <p id="mensagem">Escolha a dificuldade:</p>
+            <div class="difficulty-buttons">
+                <label>
+                    <input type="radio" name="dificuldade" value="10">
+                    Fácil (1-10)
+                </label>
+                <label>
+                    <input type="radio" name="dificuldade" value="50">
+                    Médio (1-50)
+                </label>
+                <label>
+                    <input type="radio" name="dificuldade" value="100">
+                    Difícil (1-100)
+                </label>
+            </div>
+            <button onclick="iniciarJogo()">Iniciar Jogo</button>
+        </div>
+        <div id="gameContainer" class="hidden">
+            <p id="dificuldadeEscolhida"></p>
+            <p id="mensagem">Escolha um número e clique em 'Enviar Chute'.</p>
+            <input type="number" id="inputChute" placeholder="Digite seu chute aqui">
+            <button onclick="verificarChute()">Enviar Chute</button>
+            <p id="dicas"></p>
+            <p id="tentativas">Tentativas: 0</p>
+            <button id="restartButton" class="hidden" onclick="reiniciarJogo()">Iniciar Novo Jogo</button>
+            <canvas id="fireworksCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@1.0.1/dist/fireworks.min.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
